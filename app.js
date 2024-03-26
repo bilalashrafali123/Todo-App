@@ -7,8 +7,8 @@ function addfun() {
     ol.innerHTML = ' '
     for (let i = 0; i < emptyArray.length; i++) {
         ol.innerHTML += `<li>${emptyArray[i]}
-        <img onclick="deleteTodo(${i})" src="./Assets/Images/Delete.png" alt="">
-        <img onclick="editTod(${i})" src="./Assets/Images/edit.png" alt="">
+        <img onclick="deleteTodo(${i})" src="Delete.png" alt="">
+        <img onclick="editTod(${i})" src="Edit.png" alt="">
         </li>
         `
     }
@@ -16,7 +16,7 @@ function addfun() {
 
 function renderScreen() {
     if (input.value === ''){
-        alert('Enter Your Task');
+        alert('Enter Your Todo');
     }else {
         ol.innerHTML = ' '
     emptyArray.push(input.value)
@@ -38,7 +38,7 @@ function deleteTodo(index) {
     addfun()
 }
 function editTodo(index) {
-    let editValue = prompt('Enter Ubbdated Value', emptyArray[index])
+    let editValue = prompt('Enter Updated Todo', emptyArray[index])
     emptyArray.splice(index, 1 , editValue)
     addfun()
 }
